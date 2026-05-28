@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mumbai Indians</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .header{
+            background:#004BA0;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            width:80%;
+            margin:30px auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            color:#004BA0;
+        }
+
+        ul{
+            line-height:1.8;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 20px;
+            background:#004BA0;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#003070;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Mumbai Indians</h1>
+        <p>Indian Premier League (IPL) Team</p>
+    </div>
+
+    <div class="container">
+
+        <h2>About Team</h2>
+        <p>
+            Mumbai Indians is one of the most successful teams in the IPL.
+            The team is owned by Reliance Industries and represents Mumbai city.
+        </p>
+
+        <h2>Team Information</h2>
+
+        <ul>
+            <li><b>Founded:</b> 2008</li>
+            <li><b>Home Ground:</b> Wankhede Stadium, Mumbai</li>
+            <li><b>Captain:</b> Hardik Pandya</li>
+            <li><b>Coach:</b> Mark Boucher</li>
+            <li><b>IPL Titles:</b> 5</li>
+        </ul>
+
+        <h2>Famous Players</h2>
+
+        <ul>
+            <li>Rohit Sharma</li>
+            <li>Jasprit Bumrah</li>
+            <li>Suryakumar Yadav</li>
+            <li>Hardik Pandya</li>
+        </ul>
+
+        <h1 style="font-size:30px; text-align:left; color:#004BA0; text-shadow:4px 4px 10px rgba(0,0,0,0.5); letter-spacing:3px;">
+        <p><strong>Most Successful former captain:</strong><b>{{ss.name}}</b></p>
+        <p><strong>IPL Titles won:</strong> {{ss.titles_won}}</p>
+        </h1>
+        <table rules="all" style="width:75%; border: 2px solid black">
+            <tr>
+                <td><strong>Year</strong></td>
+                <td><strong>Player of the Match</strong></td>
+                <td><strong>Opposite Team</strong></td>
+                <td><strong>Opposite Captain</strong></td>
+                <td><strong>MI Runs</strong></td>
+                <td><strong>Opponent Runs</strong></td>
+                <td><strong>Won By</strong></td>
+                <td><strong>Condition</strong></td>
+            </tr>
+        {% for i in ss.finals %}
+            <tr>
+                <td>{{i.year}}</td>
+                <td>{{i.player}}</td>
+                <td>{{i.opposite_team}}</td>
+                <td>{{i.opposite_captain}}</td>
+                <td>{{i.mi_score}}</td>
+                <td>{{i.oppo_score}}</td>
+                <td>{{i.won_by}}</td>
+                <td>
+                    {% if i.diff > 20 %}
+                        Easy win
+                    {% else %}
+                        Very Close
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+
+        <a href="/" class="btn">Back to Home</a>
+
+    </div>
+
+</body>
+</html>

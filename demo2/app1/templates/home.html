@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>IPL Teams Home</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            text-align:center;
+            width:400px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            margin-bottom:15px;
+            color:#333;
+        }
+
+        p{
+            margin-bottom:25px;
+            color:#666;
+        }
+
+        .team-link{
+            display:block;
+            text-decoration:none;
+            margin:15px 0;
+            padding:15px;
+            border-radius:8px;
+            color:white;
+            font-size:18px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .mi{
+            background:#004BA0;
+        }
+
+        .gt{
+            background:#0B3D91;
+        }
+
+        .csk{
+            background:#FFD700;
+            color:black;
+        }
+
+        .team-link:hover{
+            transform:scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>IPL Teams</h1>
+        <p>Select your favorite IPL team</p>
+
+        <a href="/MI" class="team-link mi">
+            Mumbai Indians
+        </a>
+
+        <a href="/GT" class="team-link gt">
+            Gujarat Titans
+        </a>
+
+        <a href="/CSK" class="team-link csk">
+            Chennai Super Kings
+        </a>
+
+    </div>
+
+</body>
+</html>

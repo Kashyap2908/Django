@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+        }
+
+        .container{
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        h1{
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p{
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        button{
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Our Project</h1>
+        <p>This is a temporary home page for the project.</p>
+
+        <button onclick="showMessage()">
+            Get Started
+        </button>
+    </div>
+
+    <script>
+        function showMessage(){
+            alert("Welcome to the Project Home Page!");
+        }
+    </script>
+
+</body>
+</html>
