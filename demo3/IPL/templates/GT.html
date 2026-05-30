@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block css %}
+<style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+        }
+
+        .header{
+            background:#1C1C1C;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            width:80%;
+            margin:30px auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            color:#0B3D91;
+        }
+
+        ul{
+            line-height:1.8;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            margin-right:10px;
+            padding:12px 20px;
+            background:#0B3D91;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#072c69;
+        }
+    </style>
+{% endblock css %}
+{% block content %}
+ <div class="header">
+        <h1>Gujarat Titans</h1>
+        <p>Indian Premier League (IPL) Team</p>
+    </div>
+
+    <div class="container">
+
+        <h2>About Team</h2>
+        <p>
+            Gujarat Titans is a popular IPL franchise team representing Gujarat.
+            The team won the IPL title in its debut season in 2022.
+        </p>
+
+        <h2>Team Information</h2>
+
+        <ul>
+            <li><b>Founded:</b> 2022</li>
+            <li><b>Home Ground:</b> Narendra Modi Stadium, Ahmedabad</li>
+            <li><b>Captain:</b> Shubman Gill</li>
+            <li><b>Coach:</b> Ashish Nehra</li>
+            <li><b>IPL Titles:</b> 1</li>
+        </ul>
+
+        <h2>Famous Players</h2>
+
+        <ul>
+            <li>Shubman Gill</li>
+            <li>Rashid Khan</li>
+            <li>Mohammed Shami</li>
+            <li>David Miller</li>
+        </ul>
+
+        <!-- Back to Home Button -->
+        <a href="/" class="btn">Back to Home</a>
+
+    </div>
+
+{% endblock content %}

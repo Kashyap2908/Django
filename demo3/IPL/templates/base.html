@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Teams</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        /* Navbar */
+        nav{
+            background:#003366;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:25px;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .nav-links a:hover{
+            color:#ffd700;
+        }
+
+        /* Main Content */
+        main{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:#f4f4f4;
+        }
+
+        .content h1{
+            font-size:45px;
+            color:#003366;
+            margin-bottom:15px;
+        }
+
+        .content p{
+            font-size:20px;
+            color:#555;
+        }
+
+        /* Footer */
+        footer{
+            background:#003366;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+    </style>
+    {% block css %}
+    {% endblock css %}
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IPL Teams</div>
+
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/MI">MI</a></li>
+            <li><a href="/GT">GT</a></li>
+            <li><a href="/CSK">CSK</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer>
+        <p>&copy; 2026 IPL Teams Information Portal</p>
+    </footer>
+
+</body>
+</html>
