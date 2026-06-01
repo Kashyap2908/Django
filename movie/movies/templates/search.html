@@ -1,0 +1,140 @@
+{% extends 'home.html' %}
+
+{% block css %}
+<style>
+    .container{
+        flex-direction:column;
+    }
+    .container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:40px;
+    }
+
+    .welcome-box{
+        width:450px;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .welcome-box h1{
+        text-align:center;
+        margin-bottom:20px;
+        color:#111827;
+    }
+
+    input{
+        width:100%;
+        padding:10px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+        padding:12px;
+        background:#2563eb;
+        color:white;
+        border:none;
+        border-radius:5px;
+        font-size:16px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#1d4ed8;
+    }
+    
+    .container h1{
+        text-align:center;
+        margin-bottom:25px;
+        color:#111827;
+    }
+
+    table{
+        width:80%;
+        margin:auto;
+        border-collapse:collapse;
+        background:white;
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    th{
+        background:#111827;
+        color:white;
+        padding:12px;
+    }
+
+    td{
+        padding:10px;
+        text-align:center;
+    }
+
+    tr:nth-child(even){
+        background:#f4f4f4;
+    }
+
+    tr:hover{
+        background:#dbeafe;
+    }
+</style>
+{% endblock css %}
+
+{% block title %}
+Search Movie
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="welcome-box">
+
+        <h1>Search Movie</h1>
+
+        <form method="get" action='/search'>
+
+            <label><strong>Movie Name</strong></label><br>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter movie name"
+                {% comment %} required {% endcomment %}
+            >
+
+            <br><br>
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+    </div>
+</div>
+<div class="container">
+    <h1>Movie List</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Movie Name</th>
+            <th>Release Date</th>
+            <th>Rating</th>
+        </tr>
+
+        {% for i in m %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.release_date }}</td>
+            <td>{{ i.rating }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}

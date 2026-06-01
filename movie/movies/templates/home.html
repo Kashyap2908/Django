@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Movie Website{% endblock %}</title>
+{% block css %}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        /* Content */
+        .container{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .welcome-box{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+            width:500px;
+        }
+
+        .welcome-box h1{
+            color:#111827;
+            margin-bottom:15px;
+        }
+
+        .welcome-box p{
+            color:#555;
+            font-size:18px;
+        }
+
+        
+    </style>
+{% endblock css %}
+    <style>
+        /* Navbar */
+        nav{
+            background:#111827;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:20px;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            padding:8px 15px;
+            border-radius:5px;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            background:#2563eb;
+        }
+
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🎬 Movie Website</div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/get">Add Movie</a></li>
+            <li><a href="/show">Show Movie</a></li>
+            <li><a href="/search">Search Movie</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    <div class="container">
+        <div class="welcome-box">
+            <h1>Welcome to Movie Website</h1>
+            <p>
+                Discover, manage and explore your favorite movies.
+                Use the navigation bar above to add new movies or view existing ones.
+            </p>
+        </div>
+    </div>
+    {% endblock %}
+
+    <footer>
+        <p>&copy; 2026 Movie Website</p>
+    </footer>
+
+</body>
+</html>
