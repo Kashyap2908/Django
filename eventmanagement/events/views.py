@@ -9,9 +9,9 @@ def events(requests):
     e={}
     query=requests.GET.get('search')
     if(query):
-        e=Events.objects.filter(EventName__icontains=query)
+        e=Events.objects.filter(EventName__icontains=query).order_by('EventDate')
     else:
-        e=Events.objects.all()
+        e=Events.objects.all().order_by('EventDate')
     return render(requests,'events.html',{'e':e})
 def add(req):
     event = [
